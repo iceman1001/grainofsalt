@@ -45,11 +45,12 @@ using boost::lexical_cast;
 using std::cout;
 using std::endl;
 
-GrainOfSalt::GrainOfSalt(const uint _guess_bits, const bool _sr_best_bits_from_file) :
-        bestBits(this, _sr_best_bits_from_file, _guess_bits)
-        , cnfNum(0)
+GrainOfSalt::GrainOfSalt(const uint _guess_bits, const bool _sr_best_bits_from_file):
+	bestBits(this, _sr_best_bits_from_file, _guess_bits)
 {
-    randomize_tweak();
+
+	cnfNum =0;
+	randomize_tweak();
 }
 
 void GrainOfSalt::randomize_tweak()

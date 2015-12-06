@@ -14,11 +14,12 @@ namespace bs = boost::filesystem;
 class Clause
 {
 public:
-    Clause(vector<Lit> _lits, const uint _group, const string _desc) :
-        lits(_lits)
-        , desc(_desc)
-        , group(_group)
-        {}
+    Clause(vector<Lit> _lits, const uint _group, const string _desc) {}
+//    Clause(vector<Lit> _lits, const uint _group, const string _desc) :
+//       lits(_lits)
+//        , desc(_desc)
+//        , group(_group)
+//        {}
     
     vector<Lit> lits;
     uint group;
@@ -30,11 +31,12 @@ public:
 class XorClause
 {
 public:
-    XorClause(vector<Lit> _lits, const uint _group, const string _desc) :
-        lits(_lits)
-        , desc(_desc)
-        , group(_group)
-    {}
+    XorClause(vector<Lit> _lits, const uint _group, const string _desc) {}
+//    XorClause(vector<Lit> _lits, const uint _group, const string _desc) :
+//        lits(_lits)
+//        , desc(_desc)
+//        , group(_group)
+//    {}
     
     vector<Lit> lits;
     uint group;

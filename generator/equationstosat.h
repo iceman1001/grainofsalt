@@ -122,7 +122,7 @@ private:
     @param desc the what the eqaution represents (e.g. f1[20])
     */
     uint add_karnaugh_table(const LeftHandSide& lhs, const string& desc); ///< Returns difficulty
-    const uint karn_size; ///<The maximum size of the karnaugh table in rows
+    uint karn_size; ///<The maximum size of the karnaugh table in rows
     int no_lines[3]; ///<Used for karnaugh table minimisation
     int** input; ///<The input to the karnaugh minimisation
     int** output; ///<The output of the karnaugh minimisation

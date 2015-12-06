@@ -85,12 +85,14 @@ void EquationsToSat::delete_temps()
 //---------------------
 
 EquationsToSat::EquationsToSat(const list<Equation>& _equations, SolverAttrib& _solverAttrib) :
-        simplified_out_monos(0)
-        , equations(_equations)
-        , solverAttrib(_solverAttrib)
-        , clause_group(1)
-        , karn_size((0x1UL) << cpd.max_karnaugh_table)
+        equations(_equations)
+	, solverAttrib(_solverAttrib)
 {
+	karn_size = 0x1UL << cpd.max_karnaugh_table;
+	simplified_out_monos = 0;
+	clause_group = 1;
+
+
     input = new int*[karn_size];
     for (uint i = 0; i < karn_size; i++)
         input[i] = new int[cpd.max_karnaugh_table];

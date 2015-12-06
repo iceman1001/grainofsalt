@@ -43,17 +43,17 @@ CipherDesc cpd;
 CipherDesc::CipherDesc() :
         outputs(0)
         , mixed_shifts(false)
-        , noExtendedMonomial(false)
-        , verbose(false)
-        , linearizeLinearizeable(false)
-        , mtrand(0x1234)
-        , print_stats (false)
-        , permutateClauses(false)
         , permutateVars(false)
-        , propagateFacts(true)
-        , cnfDir("satfiles")
         , fixed_state_init(false)
 {
+        noExtendedMonomial =false;
+        verbose = false;
+        mtrand = 0x1234;
+        print_stats = false;
+	propagateFacts = true;
+	cnfDir = "satfiles";
+        linearizeLinearizeable = false;
+        permutateClauses = false;
 }
 
 Monomial* CipherDesc::get_free_mixedMonos()
